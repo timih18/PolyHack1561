@@ -24,22 +24,22 @@ def start(message):
 def number(message):
     global chat_id
     chat_id = message.chat.id
-    if message.text == '/1':
+    if message.text == '/1' or message.text == '/1@sch1561_plants_bot':
         photo1 = data['1']['pict']
         bot.send_photo(chat_id, photo1, caption=data['1']['name']+'\n'+data['1']['desc'])
-    elif message.text == '/2':
+    elif message.text == '/2' or message.text == '/2@sch1561_plants_bot':
         photo2 = data['2']['pict']
         bot.send_photo(chat_id, photo2, caption=data['2']['name']+'\n'+data['2']['desc'])
-    elif message.text == '/3':
+    elif message.text == '/3' or message.text == '/3@sch1561_plants_bot':
         photo3 = data['3']['pict']
         bot.send_photo(chat_id, photo3, caption=data['3']['name']+'\n'+data['3']['desc'])
-    elif message.text == '/4':
+    elif message.text == '/4' or message.text == '/4@sch1561_plants_bot':
         photo4 = data['4']['pict']
         bot.send_photo(chat_id, photo4, caption=data['4']['name']+'\n'+data['4']['desc'])
-    elif message.text == '/5':
+    elif message.text == '/5' or message.text == '/5@sch1561_plants_bot':
         photo5 = data['5']['pict']
         bot.send_photo(chat_id, photo5, caption=data['5']['name']+'\n'+data['5']['desc'])
-    elif message.text == '/6':
+    elif message.text == '/6' or message.text == '/6@sch1561_plants_bot':
         photo6 = data['6']['pict']
         bot.send_photo(chat_id, photo6, caption=data['6']['name']+'\n'+data['6']['desc'])
 
