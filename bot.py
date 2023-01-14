@@ -2,11 +2,21 @@ import telebot
 import schedule
 from threading import Thread
 from dict import data
+import random
 
 
 bot = telebot.TeleBot('5449907668:AAGk3bPYK0RatF-A7LHzpmfHPhARin3ZERE')
 photo = 'https://media.discordapp.net/attachments/1020346164505219092/1063730044075261983/IMG_20230114_110257_603.jpg'
 chat_id = 0
+file = open('urls.txt', 'r')
+urls = []
+for i in file:
+    urls.append(i[:-1])
+
+
+def random_pic(urls):
+    i = round(random.uniform(0, 7))
+    return urls[i]
 
 
 @bot.message_handler(commands=['start'])
@@ -42,14 +52,16 @@ def number(message):
     elif message.text == '/6' or message.text == '/6@sch1561_plants_bot':
         photo6 = data['6']['pict']
         bot.send_photo(chat_id, photo6, caption=data['6']['name']+'\n'+data['6']['desc'])
+    elif message.text == '/Done' or message.text == '/Done@sch1561_plants_bot':
+        bot.send_photo(chat_id, random_pic(urls), caption='Все цветы политы!')
 
 
 def reminder1():
-    bot.send_photo(chat_id, photo, caption='Нужно полить цветы /1, /2 и /3!')
+    bot.send_photo(chat_id, photo, caption='Нужно полить цветы /1, /2 и /3!' + '\n' + '/Done')
 
 
 def reminder2():
-    bot.send_photo(chat_id, photo, caption='Нужно полить цветы /4, /5 и /6!')
+    bot.send_photo(chat_id, photo, caption='Нужно полить цветы /4, /5 и /6!' + '\n' + '/Done')
 
 
 def main():
