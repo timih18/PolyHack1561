@@ -57,6 +57,7 @@ def main():
     schedule.every().tuesday.at('10:15').do(reminder2)
     schedule.every().thursday.at('10:15').do(reminder1)
     schedule.every().friday.at('10:15').do(reminder2)
+    # Для примера
     schedule.every(90).seconds.do(reminder1)
     schedule.every(90).seconds.do(reminder2)
 
