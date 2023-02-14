@@ -5,7 +5,7 @@ from dict import data
 import random
 
 
-bot = telebot.TeleBot('5449907668:AAGk3bPYK0RatF-A7LHzpmfHPhARin3ZERE')
+bot = telebot.TeleBot(token)
 photo = 'https://media.discordapp.net/attachments/1020346164505219092/1063730044075261983/IMG_20230114_110257_603.jpg'
 chat_id = 0
 file = open('urls.txt', 'r')
